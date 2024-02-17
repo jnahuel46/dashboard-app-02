@@ -1,0 +1,1 @@
+import { CartCounter } from './CartCounter';
