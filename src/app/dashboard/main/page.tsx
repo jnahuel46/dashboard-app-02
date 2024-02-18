@@ -2,7 +2,7 @@
 export default function MainPage(){
   return (
     <div>
-      <>asaf</>
+      <>Main</>
     </div>
   )
 }

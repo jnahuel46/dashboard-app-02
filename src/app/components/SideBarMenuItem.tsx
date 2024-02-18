@@ -1,5 +1,4 @@
 "use client";
-import { log } from "console";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -12,7 +11,6 @@ interface Props {
 
 const SideBarMenuItem = ({ path, icon, title, subtitle }: Props) => {
   const param = usePathname();
-  console.log(param);
   return (
     <Link
       href={path}
