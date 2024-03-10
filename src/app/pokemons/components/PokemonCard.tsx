@@ -26,7 +26,7 @@ export const PokemonCard = ({ pokemon }: Props) => {
           </p>
           <div className="mt-5">
             <Link
-              href={`/dashboard/pokemon/${id}`}
+              href={`/dashboard/pokemon/${name}`}
               className="border rounded-full py-2 px-4 text-xs font-semibold text-gray-100"
             >
               Learn More
@@ -43,7 +43,7 @@ export const PokemonCard = ({ pokemon }: Props) => {
             </div>
             <div className="pl-3">
               <p className="text-sm font-medium text-gray-800 leading-none">
-                Dosn't Favourite
+                Dosnt Favourite
               </p>
               <p className="text-xs text-gray-500">View your campaigns</p>
             </div>

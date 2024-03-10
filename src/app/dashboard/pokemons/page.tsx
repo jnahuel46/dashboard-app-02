@@ -1,12 +1,17 @@
 import { PokemonGrid, PokemonsResponse, SimplePokemon } from "@/app/pokemons";
 
 const getPokemons = async (
-  limit = 30,
+  limit = 150,
   offset = 0
 ): Promise<SimplePokemon[]> => {
   const data: PokemonsResponse = await fetch(
     `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`,
-    { cache: "force-cache" }
+    //revalidate all the server side components after that cron 
+    {
+      next: {
+        revalidate: 60 * 60 * 30 * 6,
+      },
+    }
   ).then((res) => res.json());
 
   const pokemons = data.results.map((pokemon: any) => ({
